@@ -1,5 +1,26 @@
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-container ul li {
+  margin-right: 10px;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* .nav-container ul li a:hover {
+  background-color: #ccc;
+} */
