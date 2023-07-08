@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "./Nav";
 import "./Header.css";
 
+
+
 function Header() {
   return (
     <div>
@@ -16,8 +18,9 @@ function Header() {
         <meta property="og:site_name" content="Little Lemon" />
       </head>
       <header className="header-container">
-      <img src="LLlogo.png" alt="Little Lemon logo" />
-        <Nav />
+      {/* <img src="LLlogo.png" alt="Little Lemon logo" /> */}
+      <img src={require("./LL-logo/Asset 16@4x.png")} alt="Little Lemon logo" height={70} />
+       <Nav />
       </header>
     </div>
   );

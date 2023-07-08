@@ -1,9 +1,10 @@
 import React from "react";
+import "./Main.css";
 
 function Main() {
     return (
-        <div>
-            {/* Content or JSX to be rendered */}
+        <div className="main-container">
+            <p>Hellow</p>
         </div>
     );
 }
