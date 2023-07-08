@@ -1,11 +1,13 @@
 .main-container{
     display: grid;
     grid-template-columns: 500px 1000px;
-    grid-template-rows: 300px;
+    grid-template-rows: 400px;
     background-color: #495e57;
     justify-content: center;
   align-items: center;
 }
+
+
 
 .hero-container {
     margin-left: 50px;
@@ -36,18 +38,46 @@ button{
     background-color: #f4ce14 ;
     border-radius: 10px;
     text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: #f4a614;
+    transform: scale(1.1);
 }
 
 .heroimg{
-    
+
     border-radius: 10px;
     align-items: end;
     flex-shrink: inherit;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-left: 500px;
     width: 325px;
     height: 400px;
     flex-shrink: 0;
     object-fit: cover
 
+}
+
+@media (max-width: 768px) {
+    .main-container,.heroimg {
+      grid-template-columns: 100%;
+    }
+  }
+
+.topic-button{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow:row wrap;
+    gap: 200px;
+
+}
+
+
+#menutopic {
+    color: #000000;
+    font-family: Markazi Text;
 }
