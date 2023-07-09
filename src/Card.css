@@ -15,6 +15,8 @@
   .allcontent{
     display: grid;
     grid-template-columns: 265px;
+    grid-template-rows: 185px;
+    margin: 0px;
     
   }
 
@@ -22,6 +24,7 @@
     background-color: #edefee;
     padding: 15px;
   }
+
 
   .order{
     border: none;
@@ -45,4 +48,8 @@
 .menu-heading{
     display: flex;
     justify-content: space-between;
+}
+
+h3:last-of-type{
+  color: chocolate;
 }
