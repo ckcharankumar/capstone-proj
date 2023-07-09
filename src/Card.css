@@ -1,21 +1,16 @@
-.menu-cards{
+.menu-list p {
+    color: black;
+  }
+
+  .menu-cards{
     display: flex;
     flex-flow:wrap;
     flex-wrap: wrap;
     flex-flow:row;
-    gap: 80px;
+    gap: 50px;
     justify-content: center;
     margin-bottom: 50px;
   }
-
-
-
-
-/* .menu-list p {
-    color: black;
-  }
-
- 
 
   .allcontent{
     display: grid;
@@ -45,4 +40,9 @@
     height: 186px;
     object-fit: cover
 
-} */
+}
+
+.menu-heading{
+    display: flex;
+    justify-content: space-between;
+}
