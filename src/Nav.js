@@ -1,27 +1,40 @@
 import React from "react";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <nav className="nav-container">
       <ul className="ul-container">
         <li>
-          <a href="www.facebook.com">Home</a>
+          <Link to="/" className="nav-item">
+            Home
+          </Link>
         </li>
         <li>
-          <a href="www.facebook.com">About</a>
+          <Link to="/about" className="nav-item">
+            About
+          </Link>
         </li>
         <li>
-          <a href="www.facebook.com">Menu</a>
+          <Link to="/menu" className="nav-item">
+            Menu
+          </Link>
         </li>
         <li>
-          <a href="www.facebook.com">Reservation</a>
+          <Link to="/reservation" className="nav-item">
+            Reservation
+          </Link>
         </li>
         <li>
-          <a href="www.facebook.com">Order Online</a>
+          <Link to="/orderonline" className="nav-item">
+            Order Online
+          </Link>
         </li>
         <li>
-          <a href="www.facebook.com">Login</a>
+          <Link to="/login" className="nav-item">
+            Login
+          </Link>
         </li>
       </ul>
     </nav>

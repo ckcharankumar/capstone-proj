@@ -9,7 +9,7 @@ function Main() {
     return (
       <div>
         <Banner
-          ctTitle="Little Lemon"
+          cTitle="Little Lemon"
           location="Chicago"
           des="We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist."
         />

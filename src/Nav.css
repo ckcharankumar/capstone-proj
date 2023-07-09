@@ -19,11 +19,9 @@ li {
   padding: 5px;
   text-align: center;
   display: inline-block;
-  /* border: 1px solid coral;
-  border-radius: 10px; */
 }
 
-a:hover{
+.nav-item:hover{
   color: #f4a614;
 }
 

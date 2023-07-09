@@ -17,7 +17,7 @@
     grid-template-columns: 265px;
     grid-template-rows: 185px;
     margin: 0px;
-    
+
   }
 
   .menu-list{
@@ -41,8 +41,13 @@
 
     width: 265px;
     height: 186px;
-    object-fit: cover
+    object-fit: cover;
+    transition: transform  0.3s ease;
 
+}
+
+.cardimg:hover{
+  transform: scale(1.1);
 }
 
 .menu-heading{
