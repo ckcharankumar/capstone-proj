@@ -1,4 +1,4 @@
-.main-container {
+.main-tbcontainer {
     display: grid;
     grid-template-columns: 500px 300px;
     grid-template-rows: 400px;
@@ -7,11 +7,9 @@
     align-items: center;
     grid-column-gap: 40px;
   }
-  
 
 
-.hero-container {
-    /* margin-left: 50px; */
+.hero-tbcontainer {
     align-content: center;
     justify-content: center;
 }
@@ -49,12 +47,12 @@ button.ybutton {
     transform: scale(1.1);
 }
 
-.heroimg{
+.tbheroimg{
 
     border-radius: 10px;
     align-items: end;
     flex-shrink: inherit;
-    transform: translateY(90px);
+    width: 590px;
 
 }
 
