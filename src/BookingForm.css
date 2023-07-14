@@ -1,3 +1,53 @@
+.containerf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
 #heading {
-    color: black;
-}
+    color: #495e57;
+  }
+  
+  fieldset {
+    max-width: 300px;
+    margin: 30px;
+    margin-bottom: 100px;
+    padding: 50px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .field {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: grid;
+    font-family: sans-serif;
+    margin-bottom: 0.5rem;
+
+  }
+  
+  input{
+    width: 350px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .subbutton {
+    background-color: #daa208;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+select {
+    width: 370px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
