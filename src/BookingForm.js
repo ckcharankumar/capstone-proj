@@ -3,20 +3,25 @@ import "./BookingForm.css";
 
 function BookingForm() {
   const [name, setName] = useState("");
-//   const [table, setTable] = useState("1");
 const [contactNo, setContactNo] = useState("");
 const [date, setDate] = useState();
+const [guests, setGuests] = useState(1);
+const [time, setTime] = useState("17:00");
+const [occasion, setOccasion] = useState("Birthday");
+
+const availableTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (!name || !contactNo || !date) {
+        if (!name || !contactNo || !date || !time) {
             alert("Please fill in all required fields.");
             return;
         }
 
         console.log("Successfully Booked");
-    }
+    };
 
   return (
     <div className="containerf">
@@ -39,18 +44,39 @@ const [date, setDate] = useState();
             <input type="date"
             value={date}
             onChange={(e) => setDate (e.target.value)}
-            
             />
           </div>
 
           <div className="field">
+            <label>Choose time:</label>
+            <select
+          id="res-time"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+        >
+          {availableTimes.map((time) => (
+            <option key={time}>{time}</option>
+          ))}
+        </select>
+        </div>
+        
+
+          <div className="field">
             <label>No of Guests:</label>
-            <input type="number" placeholder="1" min="1" max="10" />
+            <input type="number"
+             placeholder="1"
+              min="1" max="10" 
+              value={guests} 
+              onChange={(e)=> setGuests(parseInt(e.target.value))}
+              />
           </div>
 
           <div className="field">
             <label>Occasion:</label>
-            <select>
+            <select 
+            value={occasion}
+            onChange={(e) => setOccasion(e.target.value)}
+            >
               <option>Meet up</option>
               <option>Birthday</option>
               <option>Anniversary</option>
@@ -76,3 +102,8 @@ const [date, setDate] = useState();
 }
 
 export default BookingForm;
+
+
+
+
+
