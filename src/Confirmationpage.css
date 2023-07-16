@@ -1,0 +1,13 @@
+.conf {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 30px;
+    padding-left: 1px;
+    padding-right: 1px;
+    border: solid 1px blueviolet;
+    border-radius: 30px;
+  }
+  

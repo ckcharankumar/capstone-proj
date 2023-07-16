@@ -1,8 +1,7 @@
-// BookingPage.js
-import React, { useEffect, useReducer } from "react";
+import React, { useReducer } from "react";
 import Tbanner from "./TableBanner";
 import BookingForm from "./BookingForm";
-import { fetchAPI } from "./api"; // Assuming you have the API library imported correctly
+
 
 function reducer(state, action) {
   switch (action.type) {
@@ -13,50 +12,17 @@ function reducer(state, action) {
   }
 }
 
-function initializeTimes(dispatch) {
-  const today = new Date();
-  const formattedDate = formatDate(today);
-
-  fetchAPI(`/api/available-times?date=${formattedDate}`)
-    .then((response) => {
-      if (response.success) {
-        dispatch({ type: "UPDATE_TIMES", times: response.times });
-      } else {
-        // Handle error
-      }
-    })
-    .catch((error) => {
-      // Handle error
-    });
-}
-
-function formatDate(date) {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+function initializeTimes() {
+  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
 }
 
 function BookingPage() {
-  const [availableTimes, dispatch] = useReducer(reducer, []);
+  const [availableTimes, dispatch] = useReducer(reducer, [], initializeTimes);
 
   const updateTimes = (date) => {
-    fetchAPI(`/api/available-times?date=${date}`)
-      .then((response) => {
-        if (response.success) {
-          dispatch({ type: "UPDATE_TIMES", times: response.times });
-        } else {
-          // Handle error
-        }
-      })
-      .catch((error) => {
-        // Handle error
-      });
+    const times = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+    dispatch({ type: "UPDATE_TIMES", times });
   };
-
-  useEffect(() => {
-    initializeTimes(dispatch);
-  }, []);
 
   return (
     <>

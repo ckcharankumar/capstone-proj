@@ -1,6 +1,6 @@
-// BookingForm.js
 import React, { useState } from "react";
 import "./BookingForm.css";
+import { useNavigate } from "react-router-dom";
 
 function BookingForm({ availableTimes, updateTimes }) {
   const [name, setName] = useState("");
@@ -9,12 +9,13 @@ function BookingForm({ availableTimes, updateTimes }) {
   const [guests, setGuests] = useState(1);
   const [time, setTime] = useState("17:00");
   const [occasion, setOccasion] = useState("Birthday");
+ const navigate = useNavigate();
 
-  const handleDateChange = (e) => {
+  function handleDateChange(e) {
     const selectedDate = e.target.value;
     setDate(selectedDate);
     updateTimes(selectedDate);
-  };
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,17 +26,7 @@ function BookingForm({ availableTimes, updateTimes }) {
     }
 
     console.log("Successfully Booked");
-    alert("Successfully Booked");
-    resetForm();
-  };
-
-  const resetForm = () => {
-    setName("");
-    setContactNo("");
-    setDate("");
-    setGuests(1);
-    setTime("17:00");
-    setOccasion("Birthday");
+    navigate("/confirm");
   };
 
   return (
@@ -56,7 +47,11 @@ function BookingForm({ availableTimes, updateTimes }) {
 
           <div className="field">
             <label>Choose date:</label>
-            <input type="date" value={date} onChange={handleDateChange} />
+            <input
+              type="date"
+              value={date}
+              onChange={handleDateChange}
+            />
           </div>
 
           <div className="field">
@@ -67,9 +62,7 @@ function BookingForm({ availableTimes, updateTimes }) {
               onChange={(e) => setTime(e.target.value)}
             >
               {availableTimes.map((time) => (
-                <option key={time} value={time}>
-                  {time}
-                </option>
+                <option key={time}>{time}</option>
               ))}
             </select>
           </div>
@@ -114,6 +107,7 @@ function BookingForm({ availableTimes, updateTimes }) {
             value="Make your reservation"
             className="subbutton"
           >
+
             Reserve Table
           </button>
         </fieldset>
