@@ -1,3 +1,4 @@
+// BookingForm.js
 import React, { useState } from "react";
 import "./BookingForm.css";
 
@@ -26,7 +27,6 @@ function BookingForm({ availableTimes, updateTimes }) {
     console.log("Successfully Booked");
     alert("Successfully Booked");
     resetForm();
-
   };
 
   const resetForm = () => {
@@ -56,11 +56,7 @@ function BookingForm({ availableTimes, updateTimes }) {
 
           <div className="field">
             <label>Choose date:</label>
-            <input
-              type="date"
-              value={date}
-              onChange={handleDateChange}
-            />
+            <input type="date" value={date} onChange={handleDateChange} />
           </div>
 
           <div className="field">
@@ -71,7 +67,9 @@ function BookingForm({ availableTimes, updateTimes }) {
               onChange={(e) => setTime(e.target.value)}
             >
               {availableTimes.map((time) => (
-                <option key={time}>{time}</option>
+                <option key={time} value={time}>
+                  {time}
+                </option>
               ))}
             </select>
           </div>
@@ -116,7 +114,6 @@ function BookingForm({ availableTimes, updateTimes }) {
             value="Make your reservation"
             className="subbutton"
           >
-
             Reserve Table
           </button>
         </fieldset>
