@@ -1,4 +1,11 @@
-.App {
+*{
+  color: black;
+}
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +43,9 @@
     transform: rotate(360deg);
   }
 }
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
